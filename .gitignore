@@ -1,0 +1,31 @@
+# ── Secrets / local config — never commit ─────────────────────────────
+api/.env
+frontend/.env
+
+# ── Python ─────────────────────────────────────────────────────────────
+api/.venv/
+__pycache__/
+*.pyc
+
+# ── Node / frontend build ──────────────────────────────────────────────
+frontend/node_modules/
+frontend/dist/
+*.tsbuildinfo
+
+# ── C build artifacts (rebuild with make / make dll) ───────────────────
+*.exe
+*.dll
+*.o
+*.lib
+*.pdb
+pipeline.wal
+NUL
+
+# ── Tooling / runtime state ────────────────────────────────────────────
+.omc/
+*.lock
+
+# ── Local source assets not needed to run the app ──────────────────────
+# (the app ships the compressed frontend/public/hero-duel.mp4 instead)
+Designing/*.mp4
+referances/

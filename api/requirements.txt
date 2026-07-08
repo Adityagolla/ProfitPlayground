@@ -1,0 +1,8 @@
+fastapi>=0.115,<1.0
+uvicorn[standard]>=0.30
+pydantic>=2.11,<3
+python-dotenv>=1.0
+# Postgres async driver — psycopg has prebuilt wheels on Python 3.13/3.14
+psycopg[binary]>=3.2
+SQLAlchemy>=2.0.36,<3
+alembic>=1.13
