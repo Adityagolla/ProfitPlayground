@@ -1,6 +1,6 @@
 # ProfitPlayground
 
-A FIFA-style 1v1 trading duel. Two players each pick a stock or crypto
+A 1v1 trading duel. Two players each pick a stock or crypto
 instrument, get identical starting cash, and trade its **real live
 price** for a timed match. Whoever grows their P&L more before the
 clock hits zero wins.
