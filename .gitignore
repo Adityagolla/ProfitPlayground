@@ -29,3 +29,7 @@ NUL
 # (the app ships the compressed frontend/public/hero-duel.mp4 instead)
 Designing/*.mp4
 referances/
+
+# ── Kept locally as personal reference; superseded by README.md publicly ──
+RunMe.md
+changes.md

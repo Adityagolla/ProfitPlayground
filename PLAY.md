@@ -6,8 +6,8 @@ timed match. Whoever grows their P&L more wins.
 
 This guide walks through everything from a blank computer to playing
 your first match. No prior experience needed — just follow the steps
-in order. For deeper technical detail see [RunMe.md](RunMe.md); for the
-full design history see [changes.md](changes.md).
+in order. For deeper technical detail see the repo root
+[README.md](README.md).
 
 ---
 
@@ -293,5 +293,5 @@ here for whichever tool you'd like to use.
 | No stocks show up in the picker, only BTC/ETH/SOL | You haven't added a `FINNHUB_API_KEY` | Either add one (Part 2c) or just play with crypto — it works the same |
 | "Match not live" message when trying to trade | Not both players have picked an instrument yet | Check the pick screen — both players need a green checkmark before trading starts |
 | Player 2's browser can't load the page at all (Option B) | Not on the same Wi-Fi, wrong IP address, or frontend wasn't restarted with `--host` | Re-check `ipconfig` for the correct IP, confirm both devices show the same Wi-Fi network name, and make sure you used `npm run dev -- --host` (not just `npm run dev`) |
-| `mingw32-make dll` (or `make dll`) fails with a compiler error | Windows compiler issue — see the notes in RunMe.md | Read the "Build the C engine DLL" section in [RunMe.md](RunMe.md) — there's a known workaround already documented there |
+| `mingw32-make dll` (or `make dll`) fails with a compiler error | Windows compiler issue | Make sure `CC64` isn't pointed at an Anaconda `m2w64-toolchain` gcc — it's known to crash on this codebase. The default (`zig cc` via `uv`) avoids this; see the root [README.md](README.md) Quick Start. |
 | Server shows `"db":"disabled"` when checking `/ready` | This is expected and fine if you left `DATABASE_URL` blank | No action needed — this just means game history isn't being saved to disk, which doesn't affect gameplay |

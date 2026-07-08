@@ -11,9 +11,9 @@ time.
 
 ## Run
 
-Requires the API server running first (see the repo root `RunMe.md`,
-Run 3 + Run 4 — build `bridge/libpipeline.dll` and start
-`uv run --project api python -m api.run` on port 8080).
+Requires the API server running first — see the repo root
+[README.md](../README.md) Quick Start (build `bridge/libpipeline.dll`,
+then `uv run --project api python -m api.run` on port 8080).
 
 ```powershell
 cd frontend
