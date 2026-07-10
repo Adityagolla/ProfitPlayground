@@ -3,9 +3,10 @@
 #   make            # build demo/pipeline_demo.exe (or .out on *nix)
 #   make run        # build and run
 #   make dll        # build bridge/libpipeline.dll (needs a 64-bit gcc — see below)
+#   make test       # build and run the matching engine test suite
 #   make clean      # remove objects and binaries
 
-.PHONY: all run dll clean
+.PHONY: all run dll test clean
 
 CC      := gcc
 CFLAGS  := -O2 -Wall -Wno-unused-function -Iengine -Ipipeline -Ibridge
@@ -54,6 +55,10 @@ dll: bridge/libpipeline.dll
 
 bridge/libpipeline.dll: $(ENGINE_SRCS) $(PIPE_SRCS) $(BRIDGE_SRCS)
 	$(CC64) $(CFLAGS) -shared -o $@ $(BRIDGE_SRCS) $(PIPE_SRCS) $(ENGINE_SRCS) $(LDFLAGS)
+
+test: matching_engine_test.c $(ENGINE_SRCS)
+	$(CC) -Wall -Wextra -O2 -Iengine -o me_test matching_engine_test.c $(ENGINE_SRCS) $(LDFLAGS)
+	./me_test
 
 clean:
 	-@del /q engine\*.o 2> NUL || true
