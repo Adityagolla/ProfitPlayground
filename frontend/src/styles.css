@@ -957,7 +957,11 @@ table.pos-table .neg { color: var(--red); }
 .home-ticker-chg.pos { color: var(--green); }
 .home-ticker-chg.neg { color: var(--red); }
 
-.home-lobby-section { display: flex; }
+/* Block, not flex: .lobby (inside) already centers itself full-bleed via
+ * its own flex + min-height:100vh. A flex row here would shrink this
+ * section's motion.div wrapper to content width instead of stretching
+ * it, pinning the card to the left edge. */
+.home-lobby-section { width: 100%; }
 
 @media (max-width: 680px) {
   .home-hero-cta { flex-direction: column; width: 100%; }

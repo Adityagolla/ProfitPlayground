@@ -16,6 +16,17 @@ guide, written for a friend with no prior context.
 
 ---
 
+## Screenshots
+
+<img src=".github/images/hero.jpg" width="100%" alt="Landing page hero: Settle the tape. 1v1 trading duels." />
+
+| | |
+|---|---|
+| ![Combat cycle + live prices](.github/images/combat-cycle.png) | ![Create or join a match](.github/images/lobby.png) |
+| ![Pick screen with live roster](.github/images/pick-screen.png) | ![Live trading dashboard](.github/images/live-match.png) |
+
+---
+
 ## Architecture
 
 ```
